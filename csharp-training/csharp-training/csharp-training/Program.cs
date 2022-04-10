@@ -13,6 +13,9 @@ namespace CSharpTraining
             Console.WriteLine("{0} minutes passed.", dateNtimespan.passedDuration());
 
             //String and String Builder
+            StringNStringBuilder stringNStringBuilder = new StringNStringBuilder("Sinni Singla");
+            Console.WriteLine("I am '{0}'",stringNStringBuilder.getFirstName());
+            stringNStringBuilder.changeName("Shanky Singla");
         }
     }
 }
