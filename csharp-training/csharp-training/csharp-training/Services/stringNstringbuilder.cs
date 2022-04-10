@@ -22,15 +22,38 @@ namespace csharp_training.Services
         public void changeName(string name)
         {
             string prevName = this.name;
-            if(!String.IsNullOrWhiteSpace(name))
+            if(!string.IsNullOrWhiteSpace(name))
             {
                 this.name = name;
-                Console.WriteLine("Name is changed from '{0}' to '{1}'", prevName, this.name);
+                writeName(prevName, this.name);
             }
             else
             {
                 Console.WriteLine("Name change failed due to invalid request!!!");
             }
+        }
+
+        public void replaceFirstName(string name)
+        {
+            string prevName = this.name;
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                int firstNameEndIndex = prevName.IndexOf(" ");
+                StringBuilder fullNameBuilder = new StringBuilder();
+                fullNameBuilder.Append(name);
+                fullNameBuilder.Append(" ");
+                fullNameBuilder.Append(this.name.Substring(firstNameEndIndex + 1));
+                writeName(prevName, fullNameBuilder.ToString());
+            }
+            else
+            {
+                Console.WriteLine("Name change failed due to invalid request!!!");
+            }
+        }
+
+        public void writeName(string prevName, string newName)
+        {
+            Console.WriteLine("Name is changed from '{0}' to '{1}'", prevName, newName);
         }
     }
 }

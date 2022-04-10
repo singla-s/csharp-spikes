@@ -24,10 +24,13 @@ namespace CSharpTraining
         public static void stringChapter()
         {
             StringNStringBuilder stringNStringBuilder = new StringNStringBuilder("Sinni Singla");
-            Console.WriteLine("I am '{0}'", stringNStringBuilder.getFirstName());
-            stringNStringBuilder.changeName("Shanky Singla");
+            //Console.WriteLine("I am '{0}'", stringNStringBuilder.getFirstName());
+            //stringNStringBuilder.changeName("Shanky Singla");
+
             float f = 10.12f;
-            Console.WriteLine(f.ToString("C2"));
+            //Console.WriteLine(f.ToString("C2"));
+
+            stringNStringBuilder.replaceFirstName("Shanky");
         }
     }
 }
