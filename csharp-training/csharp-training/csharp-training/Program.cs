@@ -6,24 +6,25 @@ namespace CSharpTraining
     {
         public static void Main(string[] args)
         {
+            Logger logger = new Logger();
             //DateTime and Timespan Block
-            dateTimeChapter();
+            dateTimeChapter(logger);
 
             //String and String Builder
-            stringChapter();
+            stringChapter(logger);
         }
 
-        public static void dateTimeChapter()
+        public static void dateTimeChapter(Logger logger)
         {
             DateTime now = DateTime.UtcNow;
-            DateNtimespan dateNtimespan = new DateNtimespan(now, now.AddHours(1), new Logger());
+            DateNtimespan dateNtimespan = new DateNtimespan(now, now.AddHours(1), logger);
             dateNtimespan.passedDuration();
             Console.WriteLine("{0} minutes passed.", dateNtimespan.passedDuration());
         }
 
-        public static void stringChapter()
+        public static void stringChapter(Logger logger)
         {
-            StringNStringBuilder stringNStringBuilder = new StringNStringBuilder("Sinni Singla", new Logger());
+            StringNStringBuilder stringNStringBuilder = new StringNStringBuilder("Sinni Singla", logger);
             //Console.WriteLine("I am '{0}'", stringNStringBuilder.getFirstName());
             //stringNStringBuilder.changeName("Shanky Singla");
 
