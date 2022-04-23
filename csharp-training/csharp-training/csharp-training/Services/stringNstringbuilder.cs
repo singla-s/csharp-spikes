@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace csharp_training.Services
 {
-    internal class StringNStringBuilder
+    public class StringNStringBuilder
     {
+        private readonly Logger _logger;
+
         public string name { get; set; }
-        public StringNStringBuilder(string name)
+        public StringNStringBuilder(string name, Logger logger)
         {
             this.name = name;
+            this._logger = logger;
         }
 
         public string getFirstName()
@@ -53,7 +56,7 @@ namespace csharp_training.Services
 
         public void writeName(string prevName, string newName)
         {
-            Console.WriteLine("Name is changed from '{0}' to '{1}'", prevName, newName);
+            _logger.log($"Name is changed from '{prevName}' to '{newName}'");
         }
     }
 }

@@ -16,14 +16,14 @@ namespace CSharpTraining
         public static void dateTimeChapter()
         {
             DateTime now = DateTime.UtcNow;
-            DateNtimespan dateNtimespan = new DateNtimespan(now, now.AddHours(1));
+            DateNtimespan dateNtimespan = new DateNtimespan(now, now.AddHours(1), new Logger());
             dateNtimespan.passedDuration();
             Console.WriteLine("{0} minutes passed.", dateNtimespan.passedDuration());
         }
 
         public static void stringChapter()
         {
-            StringNStringBuilder stringNStringBuilder = new StringNStringBuilder("Sinni Singla");
+            StringNStringBuilder stringNStringBuilder = new StringNStringBuilder("Sinni Singla", new Logger());
             //Console.WriteLine("I am '{0}'", stringNStringBuilder.getFirstName());
             //stringNStringBuilder.changeName("Shanky Singla");
 

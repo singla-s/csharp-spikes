@@ -8,17 +8,22 @@ namespace csharp_training.Services
 {
     public class DateNtimespan
     {
+        private readonly Logger _logger;
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
-        public DateNtimespan(DateTime startDate, DateTime endDate)
+        public DateNtimespan(DateTime startDate, DateTime endDate, Logger logger)
         {
             this.startDate = startDate;
             this.endDate = endDate;
-        }
+            _logger = logger;
+
+         }
 
         public double passedDuration()
         {
-            return (endDate - startDate).TotalMinutes;
+            double passedDuration = (endDate - startDate).TotalMinutes;
+            _logger.log($"{passedDuration.ToString()} minutes passed.");
+            return passedDuration;
         }
     }
 }
