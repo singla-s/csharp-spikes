@@ -6,12 +6,14 @@ namespace CSharpTraining
     {
         public static void Main(string[] args)
         {
-            Logger logger = new Logger();
-            //DateTime and Timespan Block
-            dateTimeChapter(logger);
-
-            //String and String Builder
-            stringChapter(logger);
+            MyStack stack = new MyStack();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.PrintAll();
+            Console.WriteLine(stack.Pop());
+            stack.PrintAll();
         }
 
         public static void dateTimeChapter(Logger logger)
