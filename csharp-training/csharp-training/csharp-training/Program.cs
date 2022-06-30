@@ -6,14 +6,13 @@ namespace CSharpTraining
     {
         public static void Main(string[] args)
         {
-            MyStack stack = new MyStack();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            stack.Push(4);
-            stack.PrintAll();
-            Console.WriteLine(stack.Pop());
-            stack.PrintAll();
+            DBConnection sqlConnection = new SQLConnection("hello", new TimeSpan());
+            sqlConnection.Open();
+            sqlConnection.Close();
+
+            DBConnection oracleConnection = new OracleConnection("hello2", new TimeSpan());
+            oracleConnection.Open();
+            oracleConnection.Close();
         }
 
         public static void dateTimeChapter(Logger logger)
