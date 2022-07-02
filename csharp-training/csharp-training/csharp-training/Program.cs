@@ -6,8 +6,8 @@ namespace CSharpTraining
     {
         public static void Main(string[] args)
         {
-            BooksHandler booksHandler = new BooksHandler();
-            booksHandler.ExecuteBooksHandler();
+            CompareHandler handler = new CompareHandler();
+            handler.ExecuteHandler();
         }
     }
 }
