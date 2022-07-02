@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace csharp_training.Services
+namespace csharp_training.Features
 {
     internal class MyStack
     {
@@ -34,7 +34,7 @@ namespace csharp_training.Services
         // Written only to check correctness
         public void PrintAll()
         {
-            Console.WriteLine(String.Join(',', stack.ToArray()));
+            Console.WriteLine(string.Join(',', stack.ToArray()));
         }
     }
 }

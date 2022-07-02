@@ -1,8 +1,8 @@
-﻿namespace csharp_training.Services
+﻿namespace csharp_training.Features
 {
-    internal class SQLConnection : DBConnection
+    public class SQLConnection : DBConnection
     {
-        public SQLConnection(string connectionString, TimeSpan timeOut) 
+        public SQLConnection(string connectionString, TimeSpan timeOut)
             : base(connectionString, timeOut)
         {
 

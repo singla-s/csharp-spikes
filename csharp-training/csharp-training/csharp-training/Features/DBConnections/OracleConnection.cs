@@ -1,6 +1,6 @@
-﻿namespace csharp_training.Services
+﻿namespace csharp_training.Features
 {
-    internal class OracleConnection : DBConnection
+    public class OracleConnection : DBConnection
     {
         public OracleConnection(string connectionString, TimeSpan timeOut)
             : base(connectionString, timeOut)

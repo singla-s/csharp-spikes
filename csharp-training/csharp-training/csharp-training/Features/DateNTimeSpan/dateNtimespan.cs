@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace csharp_training.Services
+namespace csharp_training.Features
 {
     public class DateNtimespan
     {
@@ -17,7 +17,7 @@ namespace csharp_training.Services
             this.endDate = endDate;
             _logger = logger;
 
-         }
+        }
 
         public double passedDuration()
         {

@@ -1,4 +1,4 @@
-﻿namespace CSharpTraining;
+﻿namespace csharp_training.Features;
 
 public class BookList
 {

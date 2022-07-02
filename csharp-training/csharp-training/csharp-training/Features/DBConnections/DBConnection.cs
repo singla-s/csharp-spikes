@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace csharp_training.Services
+namespace csharp_training.Features
 {
-    internal abstract class DBConnection
+    public abstract class DBConnection
     {
         string _connectionString;
         TimeSpan _timeout;
 
         public DBConnection(string connectionString, TimeSpan timeout)
         {
-            if(connectionString == null || connectionString.Length == 0)
+            if (connectionString == null || connectionString.Length == 0)
             {
                 throw new ArgumentNullException();
             }

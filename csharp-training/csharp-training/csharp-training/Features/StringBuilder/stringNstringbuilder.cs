@@ -1,10 +1,11 @@
-﻿using System;
+﻿using csharp_training.Features;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace csharp_training.Services
+namespace csharp_training.Features
 {
     public class StringNStringBuilder
     {
@@ -14,7 +15,7 @@ namespace csharp_training.Services
         public StringNStringBuilder(string name, Logger logger)
         {
             this.name = name;
-            this._logger = logger;
+            _logger = logger;
         }
 
         public string getFirstName()
@@ -25,7 +26,7 @@ namespace csharp_training.Services
         public void changeName(string name)
         {
             string prevName = this.name;
-            if(!string.IsNullOrWhiteSpace(name))
+            if (!string.IsNullOrWhiteSpace(name))
             {
                 this.name = name;
                 writeName(prevName, this.name);
