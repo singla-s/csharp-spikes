@@ -6,13 +6,14 @@ namespace CSharpTraining
     {
         public static void Main(string[] args)
         {
-            DBConnection sqlConnection = new SQLConnection("hello", new TimeSpan());
-            sqlConnection.Open();
-            sqlConnection.Close();
+            BookList bookList = new BookList();
+            bookList.AddBook(new Book("System Design", 99));
 
-            DBConnection oracleConnection = new OracleConnection("hello2", new TimeSpan());
-            oracleConnection.Open();
-            oracleConnection.Close();
+            bookList.AddBook(new Book("Data Structure and Algorithm", 199));
+
+            bookList.AddBook(new Book("OOP", 299));
+
+            Console.WriteLine($@"{bookList[2].Title}: ${bookList[2].Price}");
         }
 
         public static void DateTimeChapter(Logger logger)
