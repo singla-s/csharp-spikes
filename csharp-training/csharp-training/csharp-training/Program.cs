@@ -6,8 +6,8 @@ namespace CSharpTraining
     {
         public static void Main(string[] args)
         {
-            CompareHandler handler = new CompareHandler();
-            handler.ExecuteHandler();
+            EventNDelegateHandler handler = new EventNDelegateHandler();
+            handler.executeHandler();
         }
     }
 }
